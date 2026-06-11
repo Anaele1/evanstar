@@ -1,0 +1,14 @@
+/* Services */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  .card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius);
+    transition: 0.3s;
+  }
+  .card:hover { transform: translateY(-15px); }
+  .card h3 { margin: 15px 0; color: var(--accent); }

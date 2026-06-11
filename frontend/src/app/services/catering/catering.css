@@ -1,0 +1,20 @@
+#catering-list {
+  margin: 2rem;
+}
+
+#catering-list>div {
+  background: red;
+  width: 20%;
+  height: fit-content;
+  text-align: center;
+}
+
+div>img {
+  margin: 0 auto;
+  width: 70%;
+  height: 60%;
+}
+
+.request-product {
+  display: none;
+}

@@ -1,0 +1,35 @@
+ 
+  /* Hero */
+  .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2070') center/cover;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p { color: var(--muted); margin: 20px 0 30px; font-size: 1.2rem; }
+  .btn {
+    padding: 14px 28px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+/* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+  .gallery img:hover { transform: scale(1.03); transition: 0.3s; }

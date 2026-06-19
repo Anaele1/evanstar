@@ -1,37 +1,36 @@
-<!-- Navbar -->
-  <nav>
-    
-    <ul id="navLinks">
-      <li><a routerLink="" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="services" routerLinkActive="active">Services</a></li>
-      <li><a routerLink="gallery" routerLinkActive="active">Gallery</a></li>
-      <li><a routerLink="about" routerLinkActive="active">About Us</a></li>
-      <li><a routerLink="contact" routerLinkActive="active">Contact Us</a></li>
-    </ul>
-    <div class="menu-btn" id="menuBtn">☰</div>
-  </nav>
+<nav class="nav">
+  <ul id="navLinks" class="nav-links" [class.open]="menuOpen">
+    <button class="nav-list-close" (click)="closeMenu()">X</button>
+    <li><a routerLink="" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="services" routerLinkActive="active">Services</a></li>
+    <li><a routerLink="gallery" routerLinkActive="active">Gallery</a></li>
+    <li><a routerLink="about" routerLinkActive="active">About Us</a></li>
+    <li><a routerLink="contact" routerLinkActive="active">Contact Us</a></li>
+  </ul>
+  <div class="menu-btn" id="menuBtn" (click)="toggleMenu()">☰</div>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero" id="home">
-    <div>
-      <h1>Where <span>Flavour</span> Meets <span>Fashion</span></h1>
-      <p>Elevate your events with gourmet catering and custom couture, all under one roof.</p>
-      <a href="#contact" class="btn">Book Now</a>
-    </div>
-  </section>
+<!-- Hero -->
+<section class="hero" id="home">
+  <div>
+    <h1>Where <span>Flavour</span> Meets <span>Fashion</span></h1>
+    <p>Elevate your events with gourmet catering and custom couture, all under one roof.</p>
+    <a href="#contact" class="btn">Book Now</a>
+  </div>
+</section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <div class="section-title">
-      <h2>Recent Work</h2>
-      <p>A glimpse of what we’ve served and stitched.</p>
-    </div>
-    <div class="gallery">
-      <img src="/favicon.ico">
-      <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1935" alt="Fashion">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070" alt="Food">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2124" alt="Runway">
-    </div>
-  </section>
+<!-- Gallery -->
+<section id="gallery">
+  <div class="section-title">
+    <h2>Recent Work</h2>
+    <p>A glimpse of what we’ve served and stitched.</p>
+  </div>
+  <div class="gallery">
+    <img src="/favicon.ico">
+    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=1935" alt="Fashion">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070" alt="Food">
+    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2124" alt="Runway">
+  </div>
+</section>
 
 <router-outlet></router-outlet>

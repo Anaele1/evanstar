@@ -19,23 +19,93 @@
   li { list-style: none;}
   img { width: 100%; display: block; border-radius: var(--radius); }
 
- /* Navbar */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    position: sticky;
-    top: 0;
-    background: rgba(15,15,16,0.8);
-    backdrop-filter: blur(10px);
-    z-index: 100;
-  }
+/* Logo Styling */
   .logo {  background: rgba(15,15,16,0.8); margin-left: 1rem; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
   .logo span { color: var(--accent); }
-  nav ul { display: flex; gap: 24px; list-style: none; }
-  nav ul li a:hover { color: yellow; }
-  .menu-btn { display: none; cursor: pointer; font-size: 1.5rem; }
+ 
+  /* Nav Styling */
+  
+  .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  color: white;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none; /* hide on desktop */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list-close {
+  display: none;
+}
+
+/* Mobile: hide links, show hamburger */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    width: fit-content;
+  }
+
+  .nav-list-close {
+  display: block;
+  background-color: rgb(243, 14, 14);
+  font-size: 20px;
+  font-weight: 800;
+  color: #e9e8e8;
+  width: 2rem;
+  border: none;
+}
+
+  .nav-links {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 60%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 250px; /* opens dropdown */
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    padding: 0.8rem 0;
+    width: 100%;
+    margin-left: 3rem;
+  }
+}
 
   /* Sections */
   section { padding: 80px 8%; }
@@ -73,19 +143,4 @@
     border-top: 1px solid #222;
   }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    nav ul {
-      position: absolute;
-      top: 70px;
-      right: 0;
-      background: var(--card);
-      flex-direction: column;
-      width: 200px;
-      padding: 20px;
-      display: none;
-    }
-    nav ul.show { display: flex; }
-    .menu-btn { display: block; }
-    .hero h1 { font-size: 2.5rem; }
-  }
+ 
